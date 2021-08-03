@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
@@ -61,20 +62,34 @@ namespace CSharpExercises
                 "https://piworks.net/products"
             };
 
-            long totalTextLengt = 0;
-            string[] contents = new string[urls.Length];
-            for (int i = 0; i < urls.Length; ++i)
+            // --------------
+            int totalTextLength2 = 0;
+            var watch = new System.Diagnostics.Stopwatch();
+            watch.Start();
+            string[] contents2 = (string[])GetUrlContents(urls).Result;
+            watch.Stop();
+
+
+            for(int i = 0; i < contents2.Length; ++i)
             {
-                contents[i] = GetUrlContent(urls[i]).Result;
+                Console.WriteLine("string length for url({0}) : {1}.", urls[i], contents2[i].Length);
+                totalTextLength2 += contents2[i].Length;
+            }
+            Console.WriteLine("Total text length : {0}.", totalTextLength2);
+            Console.WriteLine("{0} miliseconds spent.", watch.ElapsedMilliseconds);
+
+        }
+
+        private static async Task<IEnumerable<string>> GetUrlContents(string[] urls)
+        {
+            var getStringTasks = new List<Task<string>>();
+            var client = new HttpClient();
+            foreach(string url in urls)
+            {
+                getStringTasks.Add(client.GetStringAsync(url));
             }
 
-            for(int i = 0; i < urls.Length; ++i)
-            {
-                Console.WriteLine("string length for url({0}) : {1}.", urls[i], contents[i].Length);
-                totalTextLengt += contents[i].Length;
-            }
-
-            Console.WriteLine("Total text length : {0}.", totalTextLengt);
+            return await Task.WhenAll(getStringTasks);
         }
 
         private static async Task<string> GetUrlContent(string url)
