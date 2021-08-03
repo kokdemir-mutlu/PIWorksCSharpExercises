@@ -13,13 +13,13 @@ namespace CSharpExercises
         public static void Main(string[] args)
         {
             Exercise1();
-            //Exercise2();
+            Exercise2();
         }
 
         private static void Exercise1()
         {
             Dictionary<string, int> dicExtCount = new Dictionary<string, int>();
-            ProcessDirectory(dicExtCount, @"C:\Program Files\dotnet\sdk\5.0.301");
+            ProcessDirectory(dicExtCount, @"C:\Program Files\dotnet");
             var extList = dicExtCount.ToList();
             extList.Sort((ext1, ext2) => ext2.Value.CompareTo(ext1.Value));
             foreach(KeyValuePair<string,int> element in extList)
