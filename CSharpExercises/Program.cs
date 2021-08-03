@@ -12,13 +12,22 @@ namespace CSharpExercises
 
         public static void Main(string[] args)
         {
-            //ProcessDirectory(@"C:\Program Files\dotnet\sdk\5.0.301");
-            Exercise2();
-
-            //Console.WriteLine("Hello World!");
+            Exercise1();
+            //Exercise2();
         }
 
-        public static void ProcessDirectory(string path)
+        private static void Exercise1()
+        {
+            Dictionary<string, int> dicExtCount = new Dictionary<string, int>();
+            ProcessDirectory(dicExtCount, @"C:\Program Files\dotnet\sdk\5.0.301");
+            var extList = dicExtCount.ToList();
+            extList.Sort((ext1, ext2) => ext2.Value.CompareTo(ext1.Value));
+            foreach(KeyValuePair<string,int> element in extList)
+            {
+                Console.WriteLine("{0} : {1}.", element.Key, element.Value);
+            }
+        }
+        private static void ProcessDirectory(Dictionary<string,int> dic, string path)
         {
             var queryResult = Directory.GetFiles(path)
                 .Where(path => Path.GetFileName(path).StartsWith('M'))
@@ -28,19 +37,23 @@ namespace CSharpExercises
                 {
                     Extension = fileExt,
                     Count = countExt.Count()
-                })
-                .OrderByDescending(res => res.Count);
+                });
+            
 
             foreach (var result in queryResult)
             {
-                Console.WriteLine("{0} : {1}", result.Extension, result.Count);
+                if(!dic.ContainsKey(result.Extension))
+                    dic.Add(result.Extension, result.Count);
+                else
+                    dic[result.Extension] += result.Count;
+                //Console.WriteLine("{0} : {1}", result.Extension, result.Count);
                 // ProcessFile(fileName);
             }
 
             string[] subdirectoryEntries = Directory.GetDirectories(path);
             foreach (string subdirectoryEntry in subdirectoryEntries)
             {
-                ProcessDirectory(subdirectoryEntry);
+                ProcessDirectory(dic,subdirectoryEntry);
             }
         }
 
