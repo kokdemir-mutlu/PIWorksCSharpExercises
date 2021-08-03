@@ -1,0 +1,16 @@
+C:\Users\mutlu.kokdemir\source\repos\CSharpExercises\CSharpExercises\bin\Debug\net5.0\CSharpExercises.exe
+C:\Users\mutlu.kokdemir\source\repos\CSharpExercises\CSharpExercises\bin\Debug\net5.0\CSharpExercises.deps.json
+C:\Users\mutlu.kokdemir\source\repos\CSharpExercises\CSharpExercises\bin\Debug\net5.0\CSharpExercises.runtimeconfig.json
+C:\Users\mutlu.kokdemir\source\repos\CSharpExercises\CSharpExercises\bin\Debug\net5.0\CSharpExercises.runtimeconfig.dev.json
+C:\Users\mutlu.kokdemir\source\repos\CSharpExercises\CSharpExercises\bin\Debug\net5.0\CSharpExercises.dll
+C:\Users\mutlu.kokdemir\source\repos\CSharpExercises\CSharpExercises\bin\Debug\net5.0\ref\CSharpExercises.dll
+C:\Users\mutlu.kokdemir\source\repos\CSharpExercises\CSharpExercises\bin\Debug\net5.0\CSharpExercises.pdb
+C:\Users\mutlu.kokdemir\source\repos\CSharpExercises\CSharpExercises\obj\Debug\net5.0\CSharpExercises.csproj.AssemblyReference.cache
+C:\Users\mutlu.kokdemir\source\repos\CSharpExercises\CSharpExercises\obj\Debug\net5.0\CSharpExercises.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mutlu.kokdemir\source\repos\CSharpExercises\CSharpExercises\obj\Debug\net5.0\CSharpExercises.AssemblyInfoInputs.cache
+C:\Users\mutlu.kokdemir\source\repos\CSharpExercises\CSharpExercises\obj\Debug\net5.0\CSharpExercises.AssemblyInfo.cs
+C:\Users\mutlu.kokdemir\source\repos\CSharpExercises\CSharpExercises\obj\Debug\net5.0\CSharpExercises.csproj.CoreCompileInputs.cache
+C:\Users\mutlu.kokdemir\source\repos\CSharpExercises\CSharpExercises\obj\Debug\net5.0\CSharpExercises.dll
+C:\Users\mutlu.kokdemir\source\repos\CSharpExercises\CSharpExercises\obj\Debug\net5.0\ref\CSharpExercises.dll
+C:\Users\mutlu.kokdemir\source\repos\CSharpExercises\CSharpExercises\obj\Debug\net5.0\CSharpExercises.pdb
+C:\Users\mutlu.kokdemir\source\repos\CSharpExercises\CSharpExercises\obj\Debug\net5.0\CSharpExercises.genruntimeconfig.cache
